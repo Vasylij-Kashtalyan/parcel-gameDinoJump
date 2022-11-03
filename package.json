@@ -2,6 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
+  "main": "index.js",
   "homepage": "https://github.com/Vasylij-Kashtalyan/gameDinosaurJump",
   "scripts": {
     "start": "parcel src/*.html",
