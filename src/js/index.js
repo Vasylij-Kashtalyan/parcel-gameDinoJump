@@ -4,11 +4,13 @@ refs.spaseBtn.addEventListener('click', onJump);
 refs.startBtn.addEventListener('click', onStartGame);
 
 let gameOver = false;
-let currentValue = (refs.value.textContent = 0);
+let currentValue = (refs.value.textContent = null);
+let LOCALSTORAGE_KEY = 'currentScore';
 
 function onStartGame() {
   refs.cactus.classList.add('cactusMov');
   refs.spaseBtn.disabled = false;
+
   onStartTimer();
 }
 
@@ -50,15 +52,24 @@ let GameOver = setInterval(function () {
   if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
     gameOver = true;
 
-    alert('Game Over');
     refs.cactus.classList.remove('cactusMov');
     refs.cactus.classList.remove('cactusSpeed');
     refs.cactus.classList.remove('cactusSpeedTwo');
     refs.spaseBtn.disabled = true;
-    refs.value.textContent = 0;
+
+    refs.value.textContent = null;
+
+    alert('Game Over');
+    bestScore();
   }
 }, 10);
 
 function totalValue() {
   currentValue = refs.value.textContent++;
+  localStorage.setItem(LOCALSTORAGE_KEY, currentValue);
+}
+
+function bestScore() {
+  let currentScore = localStorage.getItem(LOCALSTORAGE_KEY);
+  refs.bestValue.textContent = currentScore;
 }

@@ -4,4 +4,5 @@ export default refs = {
   spaseBtn: document.getElementById('spase'),
   startBtn: document.getElementById('start'),
   value: document.getElementById('value'),
+  bestValue: document.getElementById('bestValue'),
 };
