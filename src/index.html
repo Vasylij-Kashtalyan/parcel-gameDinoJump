@@ -8,31 +8,41 @@
     <link rel="stylesheet" href="/src/sass/main.scss" />
   </head>
   <body>
-    <!-- ---------------Результат------------ -->
-    <div class="boxValue">
-      Score:
-      <span id="value">0</span>
-    </div>
-    <!-- ---------------Кращий результат-------------- -->
-    <div class="bestScore">
-      <p class="bestScore_title">Best Score</p>
-      <ul class="bestScore_list">
-        <li class="bestScore_item">
-          <span>Name: </span>
-          <span>Score: <span id="bestValue">0</span></span>
-        </li>
-      </ul>
-    </div>
-    <!-- ---------------Гра--------------- -->
-    <div class="game">
-      <div id="dino"></div>
-      <div id="cactus"></div>
-    </div>
-    <div class="btnBox">
-      <button id="start" class="btn" type="button">Start</button>
-      <button id="spase" class="btn" type="button" disabled="true">Jump</button>
-    </div>
+    <div class="container">
+      <!-- ---------------Результат------------ -->
+      <div id="scene1">
+        <div data-depth="0.4" class="boxValue">
+          Score:
+          <span id="value">0</span>
+        </div>
+        <!-- ---------------Кращий результат-------------- -->
 
+        <div data-depth="0.5" class="bestScore">
+          <p class="bestScore_title">Best Score</p>
+          <ul class="bestScore_list">
+            <li class="bestScore_item">
+              <span>Name: </span>
+              <span>Score: <span id="bestValue">0</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ---------------Гра--------------- -->
+      <div id="scene">
+        <div data-depth="0.6" class="game">
+          <div id="dino"></div>
+          <div id="cactus"></div>
+        </div>
+      </div>
+      <div data-depth="0.3" class="btnBox">
+        <button id="start" class="btn" type="button">Start</button>
+        <button id="spase" class="btn" type="button" disabled="true">
+          Jump
+        </button>
+      </div>
+    </div>
     <script type="module" src="/src/js/index.js"></script>
+    <script src="/src/js/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   </body>
 </html>

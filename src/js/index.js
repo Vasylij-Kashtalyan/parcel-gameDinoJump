@@ -1,4 +1,9 @@
 import refs from './refs';
+var scene = document.getElementById('scene');
+var sceneStart = new Parallax(scene);
+
+var scene = document.getElementById('scene1');
+var sceneStart = new Parallax(scene1);
 
 refs.spaseBtn.addEventListener('click', onJump);
 refs.startBtn.addEventListener('click', onStartGame);

@@ -1,3 +1,9 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .game {
   width: 600px;
   height: 200px;
@@ -103,6 +109,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .boxValue {
   width: 100px;
   margin: 0 auto;
